@@ -61,6 +61,10 @@ public class MyRobot {
 			String phrase = args[0];
 			myUtil.inputKeys(robot, phrase);
 			//keyboard.writeKeyboard (robot, phrase);
+			try {
+			Thread.sleep(1000);
+			} catch(InterruptedException ie01) {
+				System.err.println(ie01.getMessage());			}
 			robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 		}
 		
